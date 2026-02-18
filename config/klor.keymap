@@ -151,7 +151,7 @@
 
             bindings = <
         &kp SINGLE_QUOTE   &kp PERCENT        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH                    &kp PIPE         &kp AMPERSAND  &kp RA(ASTERISK)  &trans         &trans
-&trans  &kp DOUBLE_QUOTES  &kp RA(AT_SIGN)    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE                   &kp EXCLAMATION  &kp EQUAL      &kp PLUS          &kp MINUS      &trans  &trans
+&trans  &kp DOUBLE_QUOTES  &kp AT_SIGN        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TILDE                   &kp EXCLAMATION  &kp EQUAL      &kp PLUS          &kp MINUS      &trans  &trans
 &trans  &kp BACKSLASH      &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOLLAR  &trans  &trans  &trans           &mkp MB1       &mkp MB2          &kp RIGHT_GUI  &trans  &trans
                                               &trans                &trans                 &trans      &trans  &trans  &trans           &kp TAB        &trans
             >;
