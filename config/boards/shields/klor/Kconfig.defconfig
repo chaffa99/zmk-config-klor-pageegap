@@ -49,3 +49,27 @@ endif # LVGL
 endif # LEFT RIGHT
 
 CONFIG_ZMK_BLE_EXPERIMENTAL_FEATURES=y
+
+if SHIELD_KLOR_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "KLOR Dongle"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+# Set this to the number of peripherals (2 for left + right halves)
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# Max connections = 2 peripherals + desired number of bluetooth profiles (e.g. 5)
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif
