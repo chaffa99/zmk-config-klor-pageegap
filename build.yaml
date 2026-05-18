@@ -13,13 +13,13 @@
 #
 
 include:
-  # 1. Left Side (Forced to True Left via CMake)
+  # 1. Left Side (Forced via the correct Central Split macro)
   - board: nice_nano_v2
     shield: klor_left_peripheral
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SPLIT_ROLE_LEFT=y
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL_SPLIT=y
     artifact-name: klor_left
 
-  # 2. Right Side (Standard Peripheral)
+  # 2. Right Side 
   - board: nice_nano_v2
     shield: klor_right
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
