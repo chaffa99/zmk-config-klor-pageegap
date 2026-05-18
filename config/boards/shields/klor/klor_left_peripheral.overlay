@@ -3,8 +3,6 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        // Hard-code this firmware target to use the Left side transformation mapping
-        zmk,matrix_transform = &default_transform;
     };
 };
 
