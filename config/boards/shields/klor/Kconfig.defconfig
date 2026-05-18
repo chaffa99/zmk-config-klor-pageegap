@@ -53,7 +53,7 @@ CONFIG_ZMK_BLE_EXPERIMENTAL_FEATURES=y
 if SHIELD_KLOR_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "KLOR Dongle"
+    default "KLOR"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
