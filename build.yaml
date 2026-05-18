@@ -12,26 +12,19 @@
 #     shield: reviung41
 #
 
-# include:
-# - board: nice_nano_v2
-#   shield: klor_left
-#   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-# - board: nice_nano_v2
-#   shield: klor_right
-#   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-# - board: seeeduino_xiao_ble
-#   shield: klor_dongle;prospector_adapter
-
 include:
+  # 1. Left Side compiled as a True Native Peripheral
   - board: nice_nano_v2
-    shield: klor_right
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_SHIELD_KLOR_LEFT=y
-    artifact-name: klor_left_mirrored
+    shield: klor_left_peripheral
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: klor_left
 
+  # 2. Right Side (Standard Native Peripheral)
   - board: nice_nano_v2
     shield: klor_right
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: klor_right
 
+  # 3. Prospector Dongle
   - board: seeeduino_xiao_ble
     shield: klor_dongle;prospector_adapter
