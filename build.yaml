@@ -13,24 +13,25 @@
 #
 
 # include:
-  # - board: nice_nano_v2
-  #   shield: klor_left
-  # - board: nice_nano_v2
-  #   shield: klor_right
-  # - board: nice_nano_v2
-  #   shield: settings_reset
-  # - board: seeeduino_xiao_ble
-  #   shield: klor_dongle;prospector_adapter
-include:
-- board: nice_nano_v2
-  shield: klor_left
-  cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-- board: nice_nano_v2
-  shield: klor_right
-  cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-- board: seeeduino_xiao_ble
-  shield: klor_dongle;prospector_adapter
 # - board: nice_nano_v2
-#   shield: settings_reset
+#   shield: klor_left
+#   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+# - board: nice_nano_v2
+#   shield: klor_right
+#   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 # - board: seeeduino_xiao_ble
-#   shield: settings_reset
+#   shield: klor_dongle;prospector_adapter
+
+include:
+  - board: nice_nano_v2
+    shield: klor_right
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_SHIELD_KLOR_LEFT=y
+    artifact-name: klor_left_mirrored
+
+  - board: nice_nano_v2
+    shield: klor_right
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: klor_right
+
+  - board: seeeduino_xiao_ble
+    shield: klor_dongle;prospector_adapter
