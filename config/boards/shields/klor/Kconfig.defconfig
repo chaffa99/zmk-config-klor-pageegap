@@ -1,25 +1,26 @@
 if SHIELD_KLOR_LEFT
-
 config ZMK_KEYBOARD_NAME
     default "KLOR"
-
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
-
 endif # SHIELD_KLOR_LEFT
 
-if SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT
+if SHIELD_KLOR_RIGHT
+config ZMK_KEYBOARD_NAME
+    default "KLOR"
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+endif # SHIELD_KLOR_RIGHT
 
+if SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT
 config ZMK_SPLIT
     default y
-
 if ZMK_DISPLAY
 config I2C
     default y
 config SSD1306
     default y
 endif # ZMK_DISPLAY
-
 if LVGL
 config LV_Z_VDB_SIZE
     default 64
@@ -31,27 +32,19 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 endif # LVGL
-
 endif # SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT
 
 if SHIELD_KLOR_SAEGEWERK_DONGLE
-
 config ZMK_KEYBOARD_NAME
     default "KLOR"
-
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-
 config ZMK_SPLIT
     default y
-
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
-
 config BT_MAX_CONN
     default 7
-
 config BT_MAX_PAIRED
     default 7
-
 endif # SHIELD_KLOR_SAEGEWERK_DONGLE
