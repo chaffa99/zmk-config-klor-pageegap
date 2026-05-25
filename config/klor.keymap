@@ -45,7 +45,7 @@
 
         adjust_layer {
             bindings = <&tog 3>;
-            key-positions = <31 33>;
+            key-positions = <30 35>;
             layers = <0>;
         };
     };
