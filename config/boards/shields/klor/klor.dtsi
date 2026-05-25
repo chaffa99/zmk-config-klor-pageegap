@@ -23,8 +23,7 @@
 
 	sensors {
 		compatible = "zmk,keymap-sensors";
-		sensors = <&left_encoder &right_encoder>;
-		triggers-per-rotation = <6>;
+		sensors = <>;
 	};
 
 	default_transform: keymap_transform_0 {
