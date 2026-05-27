@@ -65,7 +65,7 @@
         ghost: ghost {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ASTRK &kp I &kp F &kp UNDER &kp Y &kp O &kp U &kp UNDER &kp H &kp A &kp V &kp E &kp UNDER &kp G &kp H &kp O &kp S &kp T &kp S>;
+            bindings = <&kp ASTRK &kp LS(I) &kp F &kp UNDER &kp Y &kp O &kp U &kp UNDER &kp H &kp A &kp V &kp E &kp UNDER &kp G &kp H &kp O &kp S &kp T &kp S>;
             label = "GHOST";
         };
     };
