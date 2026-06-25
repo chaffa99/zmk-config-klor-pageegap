@@ -13,17 +13,6 @@
 };
 
 / {
-    left_encoder_button: gpio_keys {
-        compatible = "gpio-keys";
-        label = "Left Encoder Button";
-        
-        encoder_press: button_0 {
-            gpios = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-            label = "Encoder Press";
-            linux,code = <113>; // Native code for KEY_MUTE
-        };
-    };
-    
     behaviors {
         showscreen: showscreen {
             compatible = "zmk,behavior-tap-dance";

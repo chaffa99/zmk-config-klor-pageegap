@@ -28,3 +28,18 @@
     b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
 };
+
+/* --- DIRECT ENCODER BUTTON PIN LISTENER --- */
+/ {
+    left_encoder_button: gpio_keys {
+        compatible = "gpio-keys";
+        label = "Left Encoder Button";
+        
+        encoder_press: button_0 {
+            // Pin 9 matches the hardware route for the left encoder switch on the central nice!nano layout
+            gpios = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            label = "Encoder Press";
+            linux,code = <113>; // Sends a direct Volume Mute command to the Prospector Dongle
+        };
+    };
+};
