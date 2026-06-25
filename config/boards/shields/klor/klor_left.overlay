@@ -39,7 +39,7 @@
             // Pin 9 matches the hardware route for the left encoder switch on the central nice!nano layout
             gpios = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
             label = "Encoder Press";
-            linux,code = <113>; // Sends a direct Volume Mute command to the Prospector Dongle
+            zmk,code = <C_MUTE>; // Sends a direct Volume Mute command to the Prospector Dongle
         };
     };
 };
